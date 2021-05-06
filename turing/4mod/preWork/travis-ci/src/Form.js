@@ -7,8 +7,17 @@ const Form = () => {
 
   return (
     <form>
-    <TextField id="title"/>
-    <TextField id="content"/>
+    <TextField 
+      id="title"
+      onChange={ e => setTitle(e.target.value) }
+    />
+    <TextField
+      id="content"
+      onChange={ e => setContent(e.target.value) }
+    />
+    <button>
+      Submit
+    </button>
     </form>
   )
 }
