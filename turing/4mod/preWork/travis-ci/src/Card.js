@@ -1,9 +1,14 @@
-const Card = ({ title, content, remove }) => {
+import { Button } from '@material-ui/core';
+
+const Card = ({ title, content, removeCard }) => {
   return (
     <fieldset>
       <legend>{ title }</legend>
       <p>{ content }</p>
-      <button>💩</button>
+      <Button 
+        onClick={ () => removeCard({title: title, content: content}) }
+        children="Delete"
+      />
     </fieldset>
   )
 }

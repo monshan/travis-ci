@@ -3,6 +3,7 @@ import './App.css';
 import Form from './Form';
 import Card from './Card';
 import { useState } from 'react';
+import { Button } from '@material-ui/core';
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -12,8 +13,8 @@ const App = () => {
   }
 
   const removeCard = (toRemove) => {
-    const without = cards.filter(card => card !== toRemove)
-    setCards([...without]);
+    const withRemoval = cards.filter(card => card.title !== toRemove.title);
+    setCards([...withRemoval]);
   }
 
   const renderCards = (arr) => {
@@ -22,7 +23,7 @@ const App = () => {
       <Card
         title={ card.title }
         content={ card.content }
-        remove={ removeCard }
+        removeCard={ removeCard }
       />
       )
     })
@@ -34,7 +35,7 @@ const App = () => {
         addCard={ addCard }
       />
       <section>
-        {!!cards.length && renderCards(cards)}
+        {renderCards(cards)}
       </section>
     </div>
   );
