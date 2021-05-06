@@ -1,4 +1,4 @@
-import { TextField } from '@material-ui/core';
+import { FormControl, TextField, Button } from '@material-ui/core';
 import { useState } from 'react';
 
 const Form = () => {
@@ -6,19 +6,23 @@ const Form = () => {
   const [content, setContent] = useState('');
 
   return (
-    <form>
+    <FormControl>
     <TextField 
       id="title"
+      placeholder="Title"
       onChange={ e => setTitle(e.target.value) }
     />
     <TextField
       id="content"
+      placeholder="Content"
       onChange={ e => setContent(e.target.value) }
     />
-    <button>
+    <Button
+      variant="outlined"
+    >
       Submit
-    </button>
-    </form>
+    </Button>
+    </FormControl>
   )
 }
 
