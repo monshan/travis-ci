@@ -1,8 +1,14 @@
 .App {
   text-align: center;
   background-color: pink;
-  color: white;
+  color: gray;
   height: 100vh;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(200px, 1fr));
+  margin: 25px;
 }
 
 .App-logo {

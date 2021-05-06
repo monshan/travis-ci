@@ -1,7 +1,7 @@
 import { FormControl, TextField, Button } from '@material-ui/core';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = ({ addCard }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -19,6 +19,7 @@ const Form = () => {
     />
     <Button
       variant="outlined"
+      onClick={ e => addCard({title: title, content: content}) }
     >
       Submit
     </Button>

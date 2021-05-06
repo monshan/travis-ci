@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Form from './Form';
+import Card from './Card';
 import { useState } from 'react';
 
 const App = () => {
@@ -10,26 +11,31 @@ const App = () => {
     setCards([...cards, newCard]);
   }
 
-  const deleteCard = (toRemove) => {
+  const removeCard = (toRemove) => {
     const without = cards.filter(card => card !== toRemove)
     setCards([...without]);
   }
 
   const renderCards = (arr) => {
-    return arr.map(({ title, content }) => {
+    return arr.map(card => {
       return (
-        <fieldset>
-          <legend>{ title }</legend>
-          <p>{ content }</p>
-        </fieldset>
+      <Card
+        title={ card.title }
+        content={ card.content }
+        remove={ removeCard }
+      />
       )
     })
   }
 
   return (
     <div className="App">
-      <Form />
-      {!!cards.length && renderCards()}
+      <Form 
+        addCard={ addCard }
+      />
+      <section>
+        {!!cards.length && renderCards(cards)}
+      </section>
     </div>
   );
 }
