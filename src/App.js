@@ -3,7 +3,6 @@ import './App.css';
 import Form from './Form';
 import Card from './Card';
 import { useState } from 'react';
-import { Button } from '@material-ui/core';
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -31,9 +30,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <Form 
-        addCard={ addCard }
-      />
+      <div className="form">
+        <Form 
+          addCard={ addCard }
+        />
+      </div>
       <section>
         {renderCards(cards)}
       </section>

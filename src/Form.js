@@ -1,5 +1,6 @@
 import { FormControl, TextField, Button } from '@material-ui/core';
 import { useState } from 'react';
+import './Form.css';
 
 const Form = ({ addCard }) => {
   const [title, setTitle] = useState('');

@@ -1,8 +1,16 @@
+:root {
+  font-size: 14px;
+}
+
 .App {
   text-align: center;
   background-color: pink;
   color: gray;
   height: 100vh;
+}
+
+.form {
+  padding-top: 4rem;
 }
 
 section {
