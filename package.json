@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx cypress run",
+    "test": "npx cypress run 'cypress/integration/ideabox-testing.js'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
