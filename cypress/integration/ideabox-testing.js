@@ -1,6 +1,6 @@
 describe('MVP Ideabox Testing', () => {
   beforeEach(() => {
-    cy.visit('https://intense-dusk-39851.herokuapp.com/')
+    cy.visit('https://pacific-taiga-58654.herokuapp.com/')
     cy.get('#title').type('Example title')
     cy.get('#content').type('Some nonsense content')
     cy.get('#submitBtn').click()
