@@ -19,6 +19,7 @@ const Form = ({ addCard }) => {
       onChange={ e => setContent(e.target.value) }
     />
     <Button
+      id="submitBtn"
       variant="outlined"
       onClick={ e => addCard({title: title, content: content}) }
     >

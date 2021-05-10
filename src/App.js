@@ -35,7 +35,7 @@ const App = () => {
           addCard={ addCard }
         />
       </div>
-      <section>
+      <section id="cardContainer">
         {renderCards(cards)}
       </section>
     </div>
