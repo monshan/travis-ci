@@ -1,4 +1,5 @@
 import { Button } from '@material-ui/core';
+import './Card.css';
 
 const Card = ({ title, content, removeCard }) => {
   return (
